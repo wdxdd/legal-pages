@@ -470,24 +470,6 @@
   var buttons = Array.prototype.slice.call(document.querySelectorAll('#langbar button'));
   var codes = buttons.map(function (b) { return b.getAttribute('data-lang'); });
 
-  function normalize(tag) {
-    if (!tag) return 'en';
-    var t = tag.toLowerCase();
-    if (t.indexOf('zh-hant') === 0 || /^zh-(tw|hk|mo)/.test(t)) return 'zh-Hant';
-    if (t.indexOf('zh') === 0) return 'zh-Hans';
-    if (t.indexOf('en') === 0) return 'en';
-    if (t.indexOf('ja') === 0) return 'ja';
-    if (t.indexOf('ko') === 0) return 'ko';
-    if (t.indexOf('tr') === 0) return 'tr';
-    if (t.indexOf('pt') === 0) return 'pt';
-    if (t.indexOf('fr') === 0) return 'fr';
-    if (t.indexOf('ar') === 0) return 'ar';
-    if (t.indexOf('th') === 0) return 'th';
-    if (t.indexOf('vi') === 0) return 'vi';
-    if (t.indexOf('id') === 0) return 'id';
-    return 'en';
-  }
-
   function show(code) {
     if (codes.indexOf(code) === -1) code = 'en';
     sections.forEach(function (s) {
@@ -500,9 +482,10 @@
     try { localStorage.setItem('ohkeys-lang', code); } catch (e) {}
   }
 
+  /* 默认英文（审核人/新访客先看到英文）；用户手动切换后按选择记忆 */
   var saved = null;
   try { saved = localStorage.getItem('ohkeys-lang'); } catch (e) {}
-  var initial = saved || normalize(navigator.language || (navigator.languages && navigator.languages[0]));
+  var initial = saved && codes.indexOf(saved) !== -1 ? saved : 'en';
   show(initial);
 
   buttons.forEach(function (b) {
