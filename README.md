@@ -44,3 +44,11 @@ Base URL: `https://<username>.github.io/legal-pages/`
 - `https://wdxdd.github.io/legal-pages/<project>/privacy.html`：最终对外公开 URL，用于 App Store Connect / Google Play 等平台。
 
 跨项目职责、项目登记、语言阶段、版本和验证规则统一见 [`APP隐私政策统一管理规范`](../00-project-manage/APP隐私政策统一管理规范.md)。
+
+## 隐私政策语言要求
+
+每个项目第一次对外发布隐私政策时，必须一次性准备完整的 15 种语言：English、简体中文、繁體中文、日本語、한국어、Türkçe、Português、Français、العربية、Deutsch、Español、Italiano、Nederlands、Polski、Русский。不再按销售地区阶段逐步添加隐私政策语言。
+
+页面原有逻辑保持不变：根据浏览器语言自动切换，未匹配时回退 English；`de-DE` → Deutsch、`fr-FR` → Français、`pt-BR` → Português、`ja-JP` → 日本語、`ar-SA` → العربية、`zh-TW` / `zh-HK` → 繁體中文，其他中文地区 → 简体中文。
+
+> 当前状态提示：`musepearl/privacy.html` 已包含 15 种语言页面；`ohkeys/privacy.html` 当前仍缺 Deutsch、Español、Italiano、Nederlands、Polski、Русский 正文，因此不能视为已满足首次发布闸门。补齐真实翻译并完成核对后，才可对外首次发布。

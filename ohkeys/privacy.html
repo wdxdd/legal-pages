@@ -466,52 +466,41 @@
 </main>
 <script>
 (function () {
-  var sections = Array.prototype.slice.call(document.querySelectorAll('.lang'));
-  var buttons = Array.prototype.slice.call(document.querySelectorAll('#langbar button'));
-  var codes = buttons.map(function (b) { return b.getAttribute('data-lang'); });
+  const sections = [...document.querySelectorAll(".lang")];
+  const buttons = [...document.querySelectorAll("[data-lang]")];
+  const supported = new Set(buttons.map((button) => button.dataset.lang));
+  const languageMap = {
+    en: "en", "zh-hans": "zh-Hans", "zh-hant": "zh-Hant", ja: "ja", ko: "ko",
+    tr: "tr", pt: "pt", fr: "fr", ar: "ar", de: "de", es: "es", it: "it",
+    nl: "nl", pl: "pl", ru: "ru"
+  };
 
   function normalize(tag) {
-    if (!tag) return 'en';
-    var t = String(tag).toLowerCase();
-    if (t.indexOf('zh-hant') === 0 || /^zh-(tw|hk|mo)/.test(t)) return 'zh-Hant';
-    if (t.indexOf('zh') === 0) return 'zh-Hans';
-    if (t.indexOf('en') === 0) return 'en';
-    if (t.indexOf('ja') === 0) return 'ja';
-    if (t.indexOf('ko') === 0) return 'ko';
-    if (t.indexOf('tr') === 0) return 'tr';
-    if (t.indexOf('pt') === 0) return 'pt';
-    if (t.indexOf('fr') === 0) return 'fr';
-    if (t.indexOf('ar') === 0) return 'ar';
-    if (t.indexOf('th') === 0) return 'th';
-    if (t.indexOf('vi') === 0) return 'vi';
-    if (t.indexOf('id') === 0) return 'id';
-    return 'en';
+    const value = String(tag || "").trim().toLowerCase();
+    if (!value) return "en";
+    if (/^zh-(tw|hk|mo)(-|$)/.test(value) || value.startsWith("zh-hant")) return "zh-Hant";
+    if (value.startsWith("zh")) return "zh-Hans";
+    const base = value.split("-")[0];
+    return languageMap[base] || "en";
+  }
+
+  function browserLanguages() {
+    const values = Array.isArray(navigator.languages) && navigator.languages.length
+      ? navigator.languages
+      : [navigator.language];
+    return values.filter(Boolean);
   }
 
   function show(code) {
-    if (codes.indexOf(code) === -1) code = 'en';
-    sections.forEach(function (s) {
-      s.classList.toggle('active', s.getAttribute('data-lang') === code);
-    });
-    buttons.forEach(function (b) {
-      b.classList.toggle('active', b.getAttribute('data-lang') === code);
-    });
-    document.documentElement.lang = code;
-    try { localStorage.setItem('ohkeys-lang', code); } catch (e) {}
+    const selected = supported.has(code) ? code : "en";
+    sections.forEach((section) => section.classList.toggle("active", section.dataset.lang === selected));
+    buttons.forEach((button) => button.classList.toggle("active", button.dataset.lang === selected));
+    document.documentElement.lang = selected;
   }
 
-  /* 方案A：按浏览器/系统语言自动匹配；匹配不到 → 英文（审核人英文环境看到英文）。
-     用户手动切换过则优先用其选择。 */
-  var saved = null;
-  try { saved = localStorage.getItem('ohkeys-lang'); } catch (e) {}
-  var initial = (saved && codes.indexOf(saved) !== -1)
-    ? saved
-    : normalize(navigator.language || (navigator.languages && navigator.languages[0]));
+  buttons.forEach((button) => button.addEventListener("click", () => show(button.dataset.lang)));
+  const initial = browserLanguages().map(normalize).find((code) => supported.has(code)) || "en";
   show(initial);
-
-  buttons.forEach(function (b) {
-    b.addEventListener('click', function () { show(b.getAttribute('data-lang')); });
-  });
 })();
 </script>
 </body>
