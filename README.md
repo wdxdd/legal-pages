@@ -19,6 +19,7 @@ legal-pages/
 
 | Directory | App | Pages |
 |---|---|---|
+| `musepearl/` | MusePearl · 灵珠 | [privacy](./musepearl/privacy.html) · [support](./musepearl/support.html) |
 | `ohkeys/` | Oh Keys - LLM Balance（大模型余额助手） | [privacy](./ohkeys/privacy.html) · [support](./ohkeys/support.html) |
 
 ## Usage / 用途
