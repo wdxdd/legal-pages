@@ -12,11 +12,9 @@
   h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.25; }
   h2 { margin: 28px 0 8px; font-size: 19px; line-height: 1.35; }
   p { margin: 10px 0; }
-  ul { margin: 10px 0; padding-left: 24px; }
-  li { margin: 6px 0; }
   .meta { color: #706A75; font-size: 14px; margin: 0 0 20px; }
   .notice { background: #F3EEF8; border-radius: 14px; padding: 14px 16px; }
-  nav { display: flex; gap: 8px; margin-bottom: 22px; }
+  nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
   nav button { border: 1px solid #D9D2E0; border-radius: 999px; background: #fff; color: #4E3B5D; cursor: pointer; padding: 7px 13px; font: inherit; font-size: 14px; }
   nav button.active { background: #4E3B5D; color: #fff; border-color: #4E3B5D; }
   a { color: #4E3B5D; }
@@ -29,120 +27,375 @@
 <main>
   <div class="card">
     <nav aria-label="Language / 语言">
-      <button type="button" data-lang-button="en">English</button>
-      <button type="button" data-lang-button="zh-Hans">简体中文</button>
+      <button type="button" data-lang="en">English</button>
+      <button type="button" data-lang="zh-Hans">简体中文</button>
+      <button type="button" data-lang="zh-Hant">繁體中文</button>
+      <button type="button" data-lang="ja">日本語</button>
+      <button type="button" data-lang="ko">한국어</button>
+      <button type="button" data-lang="tr">Türkçe</button>
+      <button type="button" data-lang="pt">Português</button>
+      <button type="button" data-lang="fr">Français</button>
+      <button type="button" data-lang="ar">العربية</button>
+      <button type="button" data-lang="de">Deutsch</button>
+      <button type="button" data-lang="es">Español</button>
+      <button type="button" data-lang="it">Italiano</button>
+      <button type="button" data-lang="nl">Nederlands</button>
+      <button type="button" data-lang="pl">Polski</button>
+      <button type="button" data-lang="ru">Русский</button>
     </nav>
-
     <section class="lang" data-lang="en" lang="en">
       <h1>Privacy Policy · MusePearl</h1>
       <p class="meta">Last updated: 2026-10-05 ｜ Effective: on release of the applicable version</p>
       <p class="notice"><strong>Short version:</strong> MusePearl is a local-first inspiration library. In the current version, your inspiration content and selected media are stored on your device by default. We do not operate an account system or a MusePearl content server.</p>
-
       <h2>1. Scope</h2>
-      <p>This policy explains how MusePearl handles information when you use the current iOS or Android version. It applies to the app, its local data features, support contact, system sharing, and in-app purchase flows.</p>
-
+      <p>This policy explains how MusePearl handles information when you use the current iOS or Android version. It applies to the app, local data features, support contact, system sharing, and in-app purchase flows.</p>
       <h2>2. Information stored on your device</h2>
-      <ul>
-        <li>Inspiration text, tags, status, favorites, dates, supplements, and other content you create.</li>
-        <li>Images, thumbnails, and attachments that you choose or create in the app.</li>
-        <li>Local preferences such as appearance, language, content display, and other app settings.</li>
-        <li>Local membership entitlement state needed to provide purchased features.</li>
-      </ul>
-      <p>This information is stored locally using the platform and app storage mechanisms. The current version does not provide MusePearl account login, a MusePearl-operated content server, or iCloud / CloudKit sync.</p>
-
+      <p>Inspiration text, tags, status, favorites, dates, supplements, images, thumbnails, attachments, local preferences, and membership entitlement state may be stored on your device. The current version does not provide MusePearl account login, a MusePearl-operated content server, or iCloud / CloudKit sync.</p>
       <h2>3. Photos, camera, and notifications</h2>
-      <ul>
-        <li>Photo library access is used only when you choose to select or save media through the app.</li>
-        <li>Camera access is used only when you choose to take a photo through the app.</li>
-        <li>Notification access, when offered and authorized, is used only for the notification feature you enable.</li>
-      </ul>
-      <p>You can deny or later revoke these permissions in system settings. The app may provide a reduced experience when a permission is unavailable.</p>
-
-      <h2>4. Sharing, export, and external services</h2>
-      <p>When you explicitly use system sharing, copying, printing, exporting, email feedback, or another external action, the information you choose is passed to the system or destination app you select. That destination's own privacy policy applies to its subsequent handling.</p>
-      <p>Feedback emails are sent through your chosen mail service to <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>. We receive the contents and sender information included in that email.</p>
-
+      <p>Photo library access is used when you choose to select or save media. Camera access is used when you choose to take a photo. Notification access, when offered and authorized, is used for the notification feature you enable. You can deny or revoke these permissions in system settings.</p>
+      <h2>4. Sharing and external services</h2>
+      <p>When you explicitly use system sharing, copying, printing, exporting, email feedback, or another external action, the information you choose is passed to the system or destination app you select. That destination’s own privacy policy applies. Feedback emails are sent through your mail service to <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
       <h2>5. Membership and purchases</h2>
-      <p>Membership purchases and subscription management are processed by the applicable app store, such as Apple App Store or Google Play. MusePearl does not receive your full payment card details. The app may receive transaction, purchase, renewal, restoration, and entitlement status needed to enable the features associated with your purchase. The app store's privacy policy and terms also apply.</p>
-
+      <p>Membership purchases and subscription management are processed by the applicable app store, such as Apple App Store or Google Play. MusePearl does not receive your full payment card details. The app may receive transaction and entitlement status needed to enable purchased features.</p>
       <h2>6. Collection, advertising, and tracking</h2>
-      <p>The current version does not include a MusePearl account service, advertising network, or analytics service operated by us for the purpose of building an advertising profile. We do not sell your inspiration content. This statement does not override information handled by Apple, Google, your email provider, your selected sharing destination, or other third-party services you choose to use.</p>
-
+      <p>The current version does not include a MusePearl account service, advertising network, or analytics service operated by us for advertising profiles. We do not sell your inspiration content. This does not override information handled by platforms or third-party services you choose to use.</p>
       <h2>7. Retention and deletion</h2>
-      <p>Your local content remains on your device until you delete it in the app, clear the app's data where supported, or uninstall the app. Because the current version does not maintain a MusePearl content server, we do not retain a server-side copy of your local inspiration library.</p>
-
-      <h2>8. Children</h2>
-      <p>MusePearl is not directed to children. We do not knowingly request or collect children's personal information through a MusePearl-operated account or server.</p>
-
-      <h2>9. Changes to this policy</h2>
-      <p>We may update this policy when the app's data practices or legal requirements change. The updated policy will be posted on this page with a new “Last updated” date. Material changes may also be communicated in the app where appropriate.</p>
-
-      <h2>10. Contact</h2>
-      <p>Privacy questions and requests: <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a></p>
+      <p>Your local content remains on your device until you delete it in the app, clear the app data where supported, or uninstall the app. We do not retain a server-side copy of your local inspiration library.</p>
+      <h2>8. Changes and contact</h2>
+      <p>We may update this policy when data practices or legal requirements change. The updated version and date will be posted on this page. Privacy questions: <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
       <footer>If a translated version conflicts with the English version, the English version controls to the extent permitted by applicable law.</footer>
     </section>
-
     <section class="lang" data-lang="zh-Hans" lang="zh-Hans">
       <h1>隐私政策 · 灵珠 MusePearl</h1>
       <p class="meta">更新日期：2026-10-05 ｜ 生效日期：适用版本发布之日</p>
-      <p class="notice"><strong>简要说明：</strong>灵珠是一款本地优先的灵感库。当前版本中，你创建的灵感内容和选择的媒体默认保存在你的设备上。我们不提供灵珠账号体系，也没有由我们运营的灵珠内容服务器。</p>
-
+      <p class="notice"><strong>简要说明：</strong>灵珠是一款本地优先的灵感库。当前版本中，你创建的灵感内容和选择的媒体默认保存在设备上。我们不提供灵珠账号体系，也没有由我们运营的灵珠内容服务器。</p>
       <h2>1. 适用范围</h2>
-      <p>本政策说明你使用当前 iOS 或 Android 版本灵珠时的信息处理方式，涵盖本地数据功能、支持联系、系统分享和应用内购买流程。</p>
-
+      <p>本政策说明你使用当前 iOS 或 Android 版本灵珠时的信息处理方式，涵盖本地数据、支持联系、系统分享和应用内购买流程。</p>
       <h2>2. 保存在设备上的信息</h2>
-      <ul>
-        <li>你创建的灵感正文、标签、状态、收藏、日期、补充内容及其他内容。</li>
-        <li>你在应用中选择或创建的图片、缩略图和附件。</li>
-        <li>外观、语言、内容显示和其他应用设置等本地偏好。</li>
-        <li>用于提供已购买功能的本地会员权益状态。</li>
-      </ul>
-      <p>这些信息使用平台和应用的本地存储机制保存。当前版本不提供灵珠账号登录、灵珠自营内容服务器，也不提供 iCloud / CloudKit 同步。</p>
-
+      <p>灵感正文、标签、状态、收藏、日期、补充内容、图片、缩略图、附件、本地偏好和会员权益状态可能保存在设备上。当前版本不提供灵珠账号登录、灵珠自营内容服务器，也不提供 iCloud / CloudKit 同步。</p>
       <h2>3. 相册、相机和通知</h2>
-      <ul>
-        <li>相册权限仅在你主动选择或保存媒体时使用。</li>
-        <li>相机权限仅在你主动通过应用拍摄照片时使用。</li>
-        <li>当应用提供通知功能且你授权后，通知权限仅用于你开启的通知功能。</li>
-      </ul>
-      <p>你可以拒绝权限，也可以在系统设置中之后撤回。权限不可用时，应用可能提供受限体验。</p>
-
-      <h2>4. 分享、导出和外部服务</h2>
-      <p>当你主动使用系统分享、复制、打印、导出、反馈邮件或其他外部操作时，你选择的信息会交给系统或你选择的目标应用。后续如何处理这些信息，以目标服务自身的隐私政策为准。</p>
-      <p>反馈邮件会通过你选择的邮件服务发送至 <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>。我们会收到邮件中包含的内容和发件人信息。</p>
-
+      <p>相册权限仅在你主动选择或保存媒体时使用；相机权限仅在你主动拍摄照片时使用；当通知功能提供且你授权后，仅用于你开启的通知功能。你可以在系统设置中拒绝或撤回权限。</p>
+      <h2>4. 分享和外部服务</h2>
+      <p>当你主动使用系统分享、复制、打印、导出、反馈邮件或其他外部操作时，你选择的信息会交给系统或目标应用。后续处理以目标服务自身的隐私政策为准。反馈邮件会通过邮件服务发送至 <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>。</p>
       <h2>5. 会员和购买</h2>
-      <p>会员购买和订阅管理由适用的应用商店处理，例如 Apple App Store 或 Google Play。灵珠不会收到你的完整银行卡信息。应用可能接收启用已购买功能所需的交易、购买、续订、恢复和权益状态。应用商店自身的隐私政策和条款也适用。</p>
-
+      <p>会员购买和订阅管理由适用的应用商店处理，例如 Apple App Store 或 Google Play。灵珠不会收到完整银行卡信息，但可能接收启用已购买功能所需的交易和权益状态。</p>
       <h2>6. 收集、广告和追踪</h2>
-      <p>当前版本不包含由我们运营的灵珠账号服务、广告网络，也不提供用于建立广告画像的分析服务。我们不会出售你的灵感内容。本条不覆盖 Apple、Google、邮件服务商、你选择的分享目标或其他由你主动使用的第三方服务所处理的信息。</p>
-
+      <p>当前版本不包含由我们运营的灵珠账号服务、广告网络或用于广告画像的分析服务。我们不会出售灵感内容。本条不覆盖平台及你主动使用的第三方服务所处理的信息。</p>
       <h2>7. 保存期限和删除</h2>
-      <p>你的本地内容会保存在设备上，直到你在应用中删除、在支持的平台上清除应用数据，或卸载应用。由于当前版本没有灵珠内容服务器，我们不会在服务器端保留你的本地灵感库副本。</p>
-
-      <h2>8. 儿童</h2>
-      <p>灵珠不面向儿童。我们不会通过灵珠运营的账号或服务器明知地要求或收集儿童个人信息。</p>
-
-      <h2>9. 政策变更</h2>
-      <p>当应用的数据处理方式或法律要求发生变化时，我们可能更新本政策。更新后的政策会发布在本页面，并更新“更新日期”；在适当情况下，重大变化也可能在应用内提示。</p>
-
-      <h2>10. 联系我们</h2>
-      <p>隐私问题和请求：<a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a></p>
+      <p>本地内容会保存在设备上，直到你在应用中删除、在支持的平台上清除应用数据或卸载应用。我们不会在服务器端保留你的本地灵感库副本。</p>
+      <h2>8. 政策变更和联系我们</h2>
+      <p>当数据处理方式或法律要求变化时，我们可能更新本政策，并在本页面更新日期。隐私问题请联系：<a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>。</p>
       <footer>如果翻译版本与英文版本存在冲突，在适用法律允许的范围内，以英文版本为准。</footer>
+    </section>
+    <section class="lang" data-lang="zh-Hant" lang="zh-Hant">
+      <h1>隱私權政策 · 靈珠 MusePearl</h1>
+      <p class="meta">更新日期：2026-10-05 ｜ 生效日期：適用版本發布之日</p>
+      <p class="notice"><strong>簡要說明：</strong>靈珠是一款本機優先的靈感庫。當前版本中，你建立的靈感內容和選取的媒體預設保存在裝置上。我們不提供靈珠帳號系統，也沒有由我們營運的靈珠內容伺服器。</p>
+      <h2>1. 適用範圍</h2>
+      <p>本政策說明你使用當前 iOS 或 Android 版本靈珠時的資訊處理方式，涵蓋本機資料、支援聯絡、系統分享和 App 內購買流程。</p>
+      <h2>2. 保存在裝置上的資訊</h2>
+      <p>靈感正文、標籤、狀態、收藏、日期、補充內容、圖片、縮圖、附件、本機偏好和會員權益狀態可能保存在裝置上。當前版本不提供靈珠帳號登入、靈珠自營內容伺服器，也不提供 iCloud / CloudKit 同步。</p>
+      <h2>3. 相簿、相機和通知</h2>
+      <p>相簿權限僅在你主動選取或儲存媒體時使用；相機權限僅在你主動拍攝照片時使用；當通知功能提供且你授權後，僅用於你開啟的通知功能。你可以在系統設定中拒絕或撤回權限。</p>
+      <h2>4. 分享和外部服務</h2>
+      <p>當你主動使用系統分享、複製、列印、匯出、意見郵件或其他外部操作時，你選取的資訊會交給系統或目標 App。後續處理以目標服務自身的隱私權政策為準。意見郵件會透過郵件服務寄至 <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>。</p>
+      <h2>5. 會員和購買</h2>
+      <p>會員購買和訂閱管理由適用的 App 商店處理，例如 Apple App Store 或 Google Play。靈珠不會收到完整銀行卡資訊，但可能接收啟用已購買功能所需的交易和權益狀態。</p>
+      <h2>6. 收集、廣告和追蹤</h2>
+      <p>當前版本不包含由我們營運的靈珠帳號服務、廣告網路或用於廣告畫像的分析服務。我們不會出售靈感內容。本條不涵蓋平台及你主動使用的第三方服務所處理的資訊。</p>
+      <h2>7. 保存期限和刪除</h2>
+      <p>本機內容會保存在裝置上，直到你在 App 中刪除、在支援的平台上清除 App 資料或解除安裝 App。我們不會在伺服器端保留你的本機靈感庫副本。</p>
+      <h2>8. 政策變更和聯絡我們</h2>
+      <p>當資料處理方式或法律要求變化時，我們可能更新本政策，並在本頁更新日期。隱私權問題請聯絡：<a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>。</p>
+      <footer>如果翻譯版本與英文版本存在衝突，在適用法律允許的範圍內，以英文版本為準。</footer>
+    </section>
+    <section class="lang" data-lang="ja" lang="ja">
+      <h1>プライバシーポリシー · MusePearl</h1>
+      <p class="meta">最終更新：2026-10-05 ｜ 発効：該当バージョンのリリース時</p>
+      <p class="notice"><strong>概要：</strong>MusePearl はローカル優先のインスピレーションライブラリです。現在のバージョンでは、作成したコンテンツと選択したメディアは原則として端末に保存されます。当社が運営するアカウントシステムやコンテンツサーバーはありません。</p>
+      <h2>1. 適用範囲</h2>
+      <p>本ポリシーは、現在の iOS / Android 版 MusePearl における情報の取り扱いを説明します。ローカルデータ、サポート、システム共有、アプリ内購入を対象とします。</p>
+      <h2>2. 端末に保存される情報</h2>
+      <p>インスピレーション本文、タグ、状態、お気に入り、日付、補足、画像、サムネイル、添付ファイル、ローカル設定、購入済み機能の権利状態が端末に保存される場合があります。iCloud / CloudKit 同期は提供していません。</p>
+      <h2>3. 写真、カメラ、通知</h2>
+      <p>写真へのアクセスは、メディアを選択または保存するときに使用します。カメラは撮影を選択したときに使用します。通知を許可した場合は、利用者が有効にした通知機能に使用します。権限はシステム設定で拒否または撤回できます。</p>
+      <h2>4. 共有と外部サービス</h2>
+      <p>共有、コピー、印刷、書き出し、メールなどを明示的に利用した場合、選択した情報はシステムまたは指定したアプリに渡されます。以後の取り扱いは各サービスのポリシーに従います。お問い合わせメールは <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a> に送信されます。</p>
+      <h2>5. 会員機能と購入</h2>
+      <p>会員購入と購読管理は Apple App Store や Google Play などのストアが処理します。MusePearl は完全なカード情報を受け取りません。購入機能を有効にするため、取引・権利状態を受け取る場合があります。</p>
+      <h2>6. 収集、広告、追跡</h2>
+      <p>現在のバージョンには、当社が運営するアカウントサービス、広告ネットワーク、広告プロファイル用の分析サービスはありません。利用者が選択した第三者サービスの処理は対象外です。</p>
+      <h2>7. 保存期間と削除</h2>
+      <p>ローカルコンテンツは、アプリで削除するか、対応する方法でアプリデータを消去するか、アプリを削除するまで端末に残ります。サーバー上にライブラリのコピーは保持しません。</p>
+      <h2>8. 変更と連絡先</h2>
+      <p>データ処理や法令が変わる場合、本ページと更新日を更新します。お問い合わせ：<a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>。</p>
+      <footer>翻訳と英語版に相違がある場合、適用法の範囲で英語版を優先します。</footer>
+    </section>
+    <section class="lang" data-lang="ko" lang="ko">
+      <h1>개인정보 처리방침 · MusePearl</h1>
+      <p class="meta">최종 업데이트: 2026-10-05 ｜ 시행: 해당 버전 출시일</p>
+      <p class="notice"><strong>요약:</strong> MusePearl은 로컬 우선 영감 라이브러리입니다. 현재 버전에서는 작성한 콘텐츠와 선택한 미디어가 기본적으로 기기에 저장됩니다. 당사가 운영하는 계정 시스템이나 콘텐츠 서버는 없습니다.</p>
+      <h2>1. 적용 범위</h2>
+      <p>이 정책은 현재 iOS / Android 버전 MusePearl의 정보 처리 방식을 설명하며 로컬 데이터, 지원 문의, 시스템 공유 및 인앱 구매를 포함합니다.</p>
+      <h2>2. 기기에 저장되는 정보</h2>
+      <p>영감 본문, 태그, 상태, 즐겨찾기, 날짜, 보충 내용, 이미지, 썸네일, 첨부 파일, 로컬 설정 및 구매 권한 상태가 기기에 저장될 수 있습니다. iCloud / CloudKit 동기화는 제공하지 않습니다.</p>
+      <h2>3. 사진, 카메라 및 알림</h2>
+      <p>사진 접근은 미디어를 직접 선택하거나 저장할 때 사용됩니다. 카메라는 촬영을 선택할 때 사용됩니다. 알림을 허용한 경우 활성화한 알림 기능에만 사용됩니다. 권한은 시스템 설정에서 거부하거나 철회할 수 있습니다.</p>
+      <h2>4. 공유 및 외부 서비스</h2>
+      <p>공유, 복사, 인쇄, 내보내기 또는 이메일을 직접 사용하면 선택한 정보가 시스템이나 지정한 앱으로 전달됩니다. 이후 처리는 해당 서비스의 정책이 적용됩니다. 문의 이메일은 <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>으로 전송됩니다.</p>
+      <h2>5. 멤버십 및 구매</h2>
+      <p>멤버십 구매와 구독 관리는 Apple App Store 또는 Google Play가 처리합니다. MusePearl은 전체 카드 정보를 받지 않으며, 구매 기능 제공에 필요한 거래 및 권한 상태를 받을 수 있습니다.</p>
+      <h2>6. 수집, 광고 및 추적</h2>
+      <p>현재 버전에는 당사가 운영하는 계정 서비스, 광고 네트워크 또는 광고 프로필 목적의 분석 서비스가 없습니다. 사용자가 선택한 제3자 서비스의 처리는 해당 서비스가 관리합니다.</p>
+      <h2>7. 보관 및 삭제</h2>
+      <p>로컬 콘텐츠는 앱에서 삭제하거나 앱 데이터를 지우거나 앱을 제거할 때까지 기기에 남습니다. 서버에 영감 라이브러리 사본을 보관하지 않습니다.</p>
+      <h2>8. 변경 및 연락처</h2>
+      <p>데이터 처리 방식이나 법률이 변경되면 이 페이지와 업데이트 날짜를 변경합니다. 문의: <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <footer>번역본과 영어본이 충돌하는 경우 관련 법률이 허용하는 범위에서 영어본이 우선합니다.</footer>
+    </section>
+    <section class="lang" data-lang="tr" lang="tr">
+      <h1>Gizlilik Politikası · MusePearl</h1>
+      <p class="meta">Son güncelleme: 2026-10-05 ｜ Yürürlük: ilgili sürüm yayımlandığında</p>
+      <p class="notice"><strong>Kısa açıklama:</strong> MusePearl, yerel öncelikli bir ilham kütüphanesidir. Mevcut sürümde oluşturduğunuz içerik ve seçtiğiniz medya varsayılan olarak cihazınızda saklanır. Tarafımızca işletilen bir hesap sistemi veya içerik sunucusu yoktur.</p>
+      <h2>1. Kapsam</h2>
+      <p>Bu politika, mevcut iOS / Android MusePearl sürümünün bilgi işleme yöntemini açıklar; yerel verileri, destek iletişimini, sistem paylaşımını ve uygulama içi satın alımları kapsar.</p>
+      <h2>2. Cihazda saklanan bilgiler</h2>
+      <p>İlham metinleri, etiketler, durumlar, favoriler, tarihler, ekler, görseller, küçük görseller, dosyalar, yerel tercihler ve satın alma yetki durumu cihazda saklanabilir. iCloud / CloudKit eşzamanlaması sunulmaz.</p>
+      <h2>3. Fotoğraflar, kamera ve bildirimler</h2>
+      <p>Fotoğraf erişimi yalnızca medya seçtiğinizde veya kaydettiğinizde kullanılır. Kamera, fotoğraf çekmeyi seçtiğinizde kullanılır. Bildirimlere izin verirseniz yalnızca etkinleştirdiğiniz bildirim özelliğinde kullanılır. İzinleri ayarlardan reddedebilir veya kaldırabilirsiniz.</p>
+      <h2>4. Paylaşım ve harici hizmetler</h2>
+      <p>Paylaşım, kopyalama, yazdırma, dışa aktarma veya e-postayı açıkça kullandığınızda seçtiğiniz bilgiler sisteme veya seçtiğiniz uygulamaya aktarılır. Sonraki işlemler ilgili hizmetin politikasına tabidir. Destek e-postası <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a> adresine gönderilir.</p>
+      <h2>5. Üyelik ve satın alımlar</h2>
+      <p>Üyelik satın alma ve abonelik yönetimi Apple App Store veya Google Play tarafından işlenir. MusePearl tam kart bilgilerinizi almaz; satın alınan özellikleri etkinleştirmek için işlem ve yetki durumu alabilir.</p>
+      <h2>6. Toplama, reklam ve izleme</h2>
+      <p>Mevcut sürümde tarafımızca işletilen hesap hizmeti, reklam ağı veya reklam profili amacıyla analiz hizmeti yoktur. Seçtiğiniz üçüncü taraf hizmetlerinin işlemleri ilgili hizmete aittir.</p>
+      <h2>7. Saklama ve silme</h2>
+      <p>Yerel içerik, uygulamada silinene, uygulama verileri temizlenene veya uygulama kaldırılana kadar cihazda kalır. İlham kütüphanenizin sunucu kopyasını tutmayız.</p>
+      <h2>8. Değişiklikler ve iletişim</h2>
+      <p>Veri uygulamalarımız veya yasal gereklilikler değişirse bu sayfayı ve tarihi güncelleriz. İletişim: <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <footer>Çeviri ile İngilizce sürüm arasında fark varsa, geçerli hukukun izin verdiği ölçüde İngilizce sürüm geçerlidir.</footer>
+    </section>
+    <section class="lang" data-lang="pt" lang="pt">
+      <h1>Política de Privacidade · MusePearl</h1>
+      <p class="meta">Última atualização: 2026-10-05 ｜ Vigência: no lançamento da versão aplicável</p>
+      <p class="notice"><strong>Resumo:</strong> MusePearl é uma biblioteca de inspiração com prioridade local. Na versão atual, o conteúdo criado e as mídias escolhidas são armazenados por padrão no seu dispositivo. Não operamos um sistema de contas nem um servidor de conteúdo do MusePearl.</p>
+      <h2>1. Escopo</h2>
+      <p>Esta política explica como o MusePearl trata informações na versão atual para iOS / Android, incluindo dados locais, suporte, compartilhamento do sistema e compras no app.</p>
+      <h2>2. Informações armazenadas no dispositivo</h2>
+      <p>Textos, tags, estados, favoritos, datas, complementos, imagens, miniaturas, anexos, preferências locais e o estado de direitos de compra podem ser armazenados no dispositivo. Não oferecemos sincronização iCloud / CloudKit.</p>
+      <h2>3. Fotos, câmera e notificações</h2>
+      <p>O acesso às fotos é usado quando você escolhe selecionar ou salvar mídia. A câmera é usada quando você escolhe tirar uma foto. Notificações autorizadas são usadas para o recurso que você ativar. As permissões podem ser negadas ou revogadas nos ajustes do sistema.</p>
+      <h2>4. Compartilhamento e serviços externos</h2>
+      <p>Ao usar compartilhamento, cópia, impressão, exportação ou e-mail, as informações escolhidas são passadas ao sistema ou app selecionado. O tratamento posterior segue a política desse serviço. E-mails de suporte são enviados para <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <h2>5. Membros e compras</h2>
+      <p>Compras e assinaturas são processadas pela loja aplicável, como Apple App Store ou Google Play. O MusePearl não recebe os dados completos do cartão, mas pode receber o estado da transação e do direito necessário para ativar recursos.</p>
+      <h2>6. Coleta, publicidade e rastreamento</h2>
+      <p>A versão atual não inclui serviço de conta, rede de publicidade ou análise operada por nós para criar perfis de publicidade. O conteúdo de inspiração não é vendido.</p>
+      <h2>7. Retenção e exclusão</h2>
+      <p>O conteúdo local permanece no dispositivo até ser apagado no app, os dados serem limpos ou o app ser desinstalado. Não mantemos cópia da biblioteca em um servidor.</p>
+      <h2>8. Alterações e contato</h2>
+      <p>Quando as práticas de dados ou requisitos legais mudarem, atualizaremos esta página e a data. Contato: <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <footer>Se houver conflito entre uma tradução e a versão em inglês, a versão em inglês prevalece na medida permitida pela lei aplicável.</footer>
+    </section>
+    <section class="lang" data-lang="fr" lang="fr">
+      <h1>Politique de confidentialité · MusePearl</h1>
+      <p class="meta">Dernière mise à jour : 2026-10-05 ｜ Entrée en vigueur : à la publication de la version concernée</p>
+      <p class="notice"><strong>Résumé :</strong> MusePearl est une bibliothèque d’inspiration conçue d’abord pour le stockage local. Dans la version actuelle, votre contenu et les médias choisis sont enregistrés par défaut sur votre appareil. Nous n’exploitons ni compte ni serveur de contenu MusePearl.</p>
+      <h2>1. Champ d’application</h2>
+      <p>Cette politique explique le traitement des informations dans la version actuelle iOS / Android, notamment les données locales, le support, le partage système et les achats intégrés.</p>
+      <h2>2. Informations stockées sur l’appareil</h2>
+      <p>Textes, tags, états, favoris, dates, compléments, images, miniatures, pièces jointes, préférences locales et état des droits d’achat peuvent être stockés sur l’appareil. La synchronisation iCloud / CloudKit n’est pas proposée.</p>
+      <h2>3. Photos, caméra et notifications</h2>
+      <p>L’accès aux photos est utilisé lorsque vous choisissez un média ou l’enregistrez. La caméra est utilisée lorsque vous choisissez de prendre une photo. Les notifications autorisées servent uniquement à la fonction activée. Vous pouvez refuser ou retirer ces autorisations.</p>
+      <h2>4. Partage et services externes</h2>
+      <p>Lorsque vous utilisez le partage, la copie, l’impression, l’export ou l’e-mail, les informations choisies sont transmises au système ou à l’application sélectionnée. Le traitement ultérieur relève de ce service. Les e-mails sont envoyés à <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <h2>5. Abonnement et achats</h2>
+      <p>Les achats et abonnements sont traités par la boutique concernée, comme Apple App Store ou Google Play. MusePearl ne reçoit pas les données complètes de votre carte, mais peut recevoir l’état de transaction et de droit nécessaire aux fonctions achetées.</p>
+      <h2>6. Collecte, publicité et suivi</h2>
+      <p>La version actuelle ne contient pas de service de compte, réseau publicitaire ou service d’analyse exploité par nous pour créer un profil publicitaire. Nous ne vendons pas votre contenu d’inspiration.</p>
+      <h2>7. Conservation et suppression</h2>
+      <p>Le contenu local reste sur l’appareil jusqu’à sa suppression dans l’app, à l’effacement des données ou à la désinstallation. Nous ne conservons pas de copie serveur de votre bibliothèque.</p>
+      <h2>8. Modifications et contact</h2>
+      <p>En cas d’évolution des pratiques ou du droit, nous mettrons à jour cette page et sa date. Contact : <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <footer>En cas de conflit entre une traduction et la version anglaise, la version anglaise prévaut dans la mesure permise par le droit applicable.</footer>
+    </section>
+    <section class="lang" data-lang="ar" lang="ar" dir="rtl">
+      <h1>سياسة الخصوصية · MusePearl</h1>
+      <p class="meta">آخر تحديث: 2026-10-05 ｜ سارية عند إصدار النسخة المعنية</p>
+      <p class="notice"><strong>ملخص:</strong> MusePearl مكتبة إلهام تضع التخزين المحلي أولاً. في الإصدار الحالي، يُحفظ المحتوى الذي تنشئه والوسائط التي تختارها على جهازك افتراضياً. لا ندير نظام حسابات أو خادماً لمحتوى MusePearl.</p>
+      <h2>1. النطاق</h2>
+      <p>توضح هذه السياسة كيفية التعامل مع المعلومات في إصدار MusePearl الحالي لنظامي iOS وAndroid، بما في ذلك البيانات المحلية والدعم والمشاركة وعمليات الشراء داخل التطبيق.</p>
+      <h2>2. المعلومات المحفوظة على الجهاز</h2>
+      <p>قد تُحفظ النصوص والعلامات والحالات والمفضلة والتواريخ والمحتوى الإضافي والصور والمصغرات والمرفقات والتفضيلات المحلية وحالة استحقاق المشتريات على الجهاز. لا نوفر مزامنة iCloud / CloudKit.</p>
+      <h2>3. الصور والكاميرا والإشعارات</h2>
+      <p>يُستخدم الوصول إلى الصور عند اختيار الوسائط أو حفظها. تُستخدم الكاميرا عند اختيار التقاط صورة. تُستخدم الإشعارات المسموح بها للميزة التي تفعلها فقط. يمكنك رفض الأذونات أو سحبها من إعدادات النظام.</p>
+      <h2>4. المشاركة والخدمات الخارجية</h2>
+      <p>عند استخدام المشاركة أو النسخ أو الطباعة أو التصدير أو البريد الإلكتروني، تُرسل المعلومات التي تختارها إلى النظام أو التطبيق المحدد. تخضع المعالجة اللاحقة لسياسة الخدمة المعنية. تُرسل رسائل الدعم إلى <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <h2>5. العضوية والمشتريات</h2>
+      <p>تعالج متاجر التطبيقات، مثل Apple App Store أو Google Play، المشتريات والاشتراكات. لا يتلقى MusePearl بيانات بطاقتك الكاملة، وقد يتلقى حالة المعاملة والاستحقاق اللازمة لتفعيل الميزات.</p>
+      <h2>6. الجمع والإعلانات والتتبع</h2>
+      <p>لا يتضمن الإصدار الحالي خدمة حساب أو شبكة إعلانات أو خدمة تحليلات نديرها لإنشاء ملفات إعلانية. لا نبيع محتوى الإلهام الخاص بك.</p>
+      <h2>7. الاحتفاظ والحذف</h2>
+      <p>يبقى المحتوى المحلي على جهازك حتى تحذفه من التطبيق أو تمسح بيانات التطبيق أو تزيل التطبيق. لا نحتفظ بنسخة من مكتبتك على خادم.</p>
+      <h2>8. التغييرات والتواصل</h2>
+      <p>إذا تغيرت ممارسات البيانات أو المتطلبات القانونية، سنحدث هذه الصفحة وتاريخها. للتواصل: <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <footer>إذا تعارضت ترجمة مع النسخة الإنجليزية، تسود النسخة الإنجليزية بالقدر الذي يسمح به القانون المعمول به.</footer>
+    </section>
+    <section class="lang" data-lang="de" lang="de">
+      <h1>Datenschutzerklärung · MusePearl</h1>
+      <p class="meta">Zuletzt aktualisiert: 2026-10-05 ｜ Gültig ab: Veröffentlichung der jeweiligen Version</p>
+      <p class="notice"><strong>Kurzfassung:</strong> MusePearl ist eine lokal ausgerichtete Inspirationsbibliothek. In der aktuellen Version werden Ihre erstellten Inhalte und ausgewählten Medien standardmäßig auf Ihrem Gerät gespeichert. Wir betreiben kein Konto- oder MusePearl-Inhaltsserversystem.</p>
+      <h2>1. Geltungsbereich</h2>
+      <p>Diese Erklärung beschreibt den Umgang mit Informationen in der aktuellen iOS-/Android-Version, einschließlich lokaler Daten, Support, Systemfreigabe und In-App-Käufen.</p>
+      <h2>2. Auf dem Gerät gespeicherte Informationen</h2>
+      <p>Texte, Tags, Status, Favoriten, Daten, Ergänzungen, Bilder, Miniaturen, Anhänge, lokale Einstellungen und der Berechtigungsstatus gekaufter Funktionen können auf dem Gerät gespeichert werden. Eine iCloud-/CloudKit-Synchronisierung wird nicht angeboten.</p>
+      <h2>3. Fotos, Kamera und Benachrichtigungen</h2>
+      <p>Der Fotozugriff wird verwendet, wenn Sie Medien auswählen oder speichern. Die Kamera wird verwendet, wenn Sie ein Foto aufnehmen. Erlaubte Benachrichtigungen dienen nur der aktivierten Funktion. Berechtigungen können in den Systemeinstellungen entzogen werden.</p>
+      <h2>4. Freigabe und externe Dienste</h2>
+      <p>Bei ausdrücklich genutztem Teilen, Kopieren, Drucken, Exportieren oder E-Mail werden die ausgewählten Informationen an das System oder die ausgewählte App übergeben. Für die weitere Verarbeitung gilt die Richtlinie des jeweiligen Dienstes. Support-E-Mails gehen an <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <h2>5. Mitgliedschaft und Käufe</h2>
+      <p>Käufe und Abonnements werden vom jeweiligen App Store, etwa Apple App Store oder Google Play, verarbeitet. MusePearl erhält keine vollständigen Kartendaten, kann aber Transaktions- und Berechtigungsstatus für gekaufte Funktionen erhalten.</p>
+      <h2>6. Erhebung, Werbung und Tracking</h2>
+      <p>Die aktuelle Version enthält keinen von uns betriebenen Kontodienst, kein Werbenetzwerk und keinen Analysedienst zur Erstellung von Werbeprofilen. Wir verkaufen Ihre Inspirationsinhalte nicht.</p>
+      <h2>7. Aufbewahrung und Löschung</h2>
+      <p>Lokale Inhalte bleiben auf dem Gerät, bis sie in der App gelöscht, die App-Daten gelöscht oder die App deinstalliert werden. Wir bewahren keine Serverkopie Ihrer Bibliothek auf.</p>
+      <h2>8. Änderungen und Kontakt</h2>
+      <p>Bei Änderungen der Datenpraxis oder des Rechts aktualisieren wir diese Seite und das Datum. Kontakt: <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <footer>Bei Widersprüchen zwischen einer Übersetzung und der englischen Version gilt im gesetzlich zulässigen Umfang die englische Version.</footer>
+    </section>
+    <section class="lang" data-lang="es" lang="es">
+      <h1>Política de privacidad · MusePearl</h1>
+      <p class="meta">Última actualización: 2026-10-05 ｜ Vigente: al publicar la versión correspondiente</p>
+      <p class="notice"><strong>Resumen:</strong> MusePearl es una biblioteca de inspiración con prioridad local. En la versión actual, el contenido creado y los medios elegidos se guardan por defecto en tu dispositivo. No operamos un sistema de cuentas ni un servidor de contenido de MusePearl.</p>
+      <h2>1. Alcance</h2>
+      <p>Esta política explica cómo se trata la información en la versión actual para iOS / Android, incluidos los datos locales, el soporte, el uso compartido del sistema y las compras dentro de la app.</p>
+      <h2>2. Información almacenada en el dispositivo</h2>
+      <p>El texto, las etiquetas, los estados, favoritos, fechas, complementos, imágenes, miniaturas, adjuntos, preferencias locales y el estado de derechos de compra pueden guardarse en el dispositivo. No ofrecemos sincronización iCloud / CloudKit.</p>
+      <h2>3. Fotos, cámara y notificaciones</h2>
+      <p>El acceso a fotos se usa cuando eliges seleccionar o guardar contenido. La cámara se usa cuando eliges tomar una foto. Las notificaciones autorizadas se usan para la función que actives. Puedes revocar permisos en los ajustes del sistema.</p>
+      <h2>4. Compartir y servicios externos</h2>
+      <p>Al usar compartir, copiar, imprimir, exportar o correo, la información elegida se entrega al sistema o a la app seleccionada. El tratamiento posterior depende de ese servicio. Los correos de soporte se envían a <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <h2>5. Membresía y compras</h2>
+      <p>Las compras y suscripciones las procesan las tiendas correspondientes, como Apple App Store o Google Play. MusePearl no recibe los datos completos de tu tarjeta, pero puede recibir estados de transacción y derechos para activar funciones.</p>
+      <h2>6. Recopilación, publicidad y seguimiento</h2>
+      <p>La versión actual no incluye un servicio de cuentas, una red publicitaria ni análisis operado por nosotros para crear perfiles publicitarios. No vendemos tu contenido de inspiración.</p>
+      <h2>7. Conservación y eliminación</h2>
+      <p>El contenido local permanece en el dispositivo hasta que lo eliminas en la app, borras los datos o desinstalas la app. No conservamos una copia en servidores.</p>
+      <h2>8. Cambios y contacto</h2>
+      <p>Si cambian nuestras prácticas o los requisitos legales, actualizaremos esta página y la fecha. Contacto: <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <footer>Si una traducción entra en conflicto con la versión inglesa, prevalece la versión inglesa en la medida permitida por la ley aplicable.</footer>
+    </section>
+    <section class="lang" data-lang="it" lang="it">
+      <h1>Informativa sulla privacy · MusePearl</h1>
+      <p class="meta">Ultimo aggiornamento: 2026-10-05 ｜ Efficace: alla pubblicazione della versione applicabile</p>
+      <p class="notice"><strong>In sintesi:</strong> MusePearl è una libreria di ispirazioni con priorità locale. Nella versione attuale, i contenuti creati e i media scelti vengono salvati per impostazione predefinita sul dispositivo. Non gestiamo un sistema di account né un server di contenuti MusePearl.</p>
+      <h2>1. Ambito</h2>
+      <p>Questa informativa descrive il trattamento delle informazioni nella versione attuale iOS / Android, inclusi dati locali, assistenza, condivisione di sistema e acquisti in-app.</p>
+      <h2>2. Informazioni salvate sul dispositivo</h2>
+      <p>Testi, tag, stati, preferiti, date, integrazioni, immagini, miniature, allegati, preferenze locali e stato dei diritti acquistati possono essere salvati sul dispositivo. Non offriamo la sincronizzazione iCloud / CloudKit.</p>
+      <h2>3. Foto, fotocamera e notifiche</h2>
+      <p>L’accesso alle foto è usato quando scegli di selezionare o salvare media. La fotocamera è usata quando scegli di scattare. Le notifiche autorizzate servono solo alla funzione attivata. Puoi revocare i permessi nelle impostazioni.</p>
+      <h2>4. Condivisione e servizi esterni</h2>
+      <p>Quando usi condivisione, copia, stampa, esportazione o e-mail, le informazioni scelte vengono passate al sistema o all’app selezionata. Il trattamento successivo segue la policy del servizio. Le e-mail di supporto sono inviate a <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <h2>5. Abbonamenti e acquisti</h2>
+      <p>Acquisti e abbonamenti sono gestiti dallo store applicabile, come Apple App Store o Google Play. MusePearl non riceve i dati completi della carta, ma può ricevere lo stato della transazione e dei diritti necessari alle funzioni acquistate.</p>
+      <h2>6. Raccolta, pubblicità e tracciamento</h2>
+      <p>La versione attuale non include un servizio account, una rete pubblicitaria o un servizio analitico gestito da noi per creare profili pubblicitari. Non vendiamo i tuoi contenuti di ispirazione.</p>
+      <h2>7. Conservazione e cancellazione</h2>
+      <p>I contenuti locali restano sul dispositivo finché non li elimini nell’app, cancelli i dati o disinstalli l’app. Non conserviamo una copia sul server.</p>
+      <h2>8. Modifiche e contatti</h2>
+      <p>Se cambiano le pratiche sui dati o i requisiti legali, aggiorneremo questa pagina e la data. Contatti: <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <footer>In caso di conflitto tra una traduzione e la versione inglese, prevale la versione inglese nei limiti consentiti dalla legge applicabile.</footer>
+    </section>
+    <section class="lang" data-lang="nl" lang="nl">
+      <h1>Privacybeleid · MusePearl</h1>
+      <p class="meta">Laatst bijgewerkt: 2026-10-05 ｜ Geldig: bij publicatie van de betreffende versie</p>
+      <p class="notice"><strong>Kort samengevat:</strong> MusePearl is een inspiratiebibliotheek met lokale opslag als uitgangspunt. In de huidige versie worden uw gemaakte inhoud en gekozen media standaard op uw apparaat opgeslagen. Wij beheren geen account- of MusePearl-inhoudsserver.</p>
+      <h2>1. Reikwijdte</h2>
+      <p>Dit beleid beschrijft hoe informatie wordt verwerkt in de huidige iOS-/Android-versie, waaronder lokale gegevens, ondersteuning, systeemdelen en in-app-aankopen.</p>
+      <h2>2. Informatie op uw apparaat</h2>
+      <p>Tekst, tags, statussen, favorieten, datums, aanvullingen, afbeeldingen, miniaturen, bijlagen, lokale voorkeuren en aankooprechten kunnen op uw apparaat worden opgeslagen. iCloud-/CloudKit-synchronisatie wordt niet aangeboden.</p>
+      <h2>3. Foto’s, camera en meldingen</h2>
+      <p>Toegang tot foto’s wordt gebruikt wanneer u media kiest of opslaat. De camera wordt gebruikt wanneer u een foto maakt. Toegestane meldingen worden alleen gebruikt voor de functie die u activeert. U kunt rechten intrekken via de systeeminstellingen.</p>
+      <h2>4. Delen en externe diensten</h2>
+      <p>Bij delen, kopiëren, afdrukken, exporteren of e-mail worden de gekozen gegevens doorgegeven aan het systeem of de gekozen app. De verdere verwerking valt onder het beleid van die dienst. Support-e-mails worden verzonden naar <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <h2>5. Lidmaatschap en aankopen</h2>
+      <p>Aankopen en abonnementen worden verwerkt door de betreffende app store, zoals Apple App Store of Google Play. MusePearl ontvangt geen volledige kaartgegevens, maar kan transactie- en rechtenstatus ontvangen voor gekochte functies.</p>
+      <h2>6. Verzameling, reclame en tracking</h2>
+      <p>De huidige versie bevat geen door ons beheerde accountdienst, advertentienetwerk of analysedienst voor advertentieprofielen. Wij verkopen uw inspiratie-inhoud niet.</p>
+      <h2>7. Bewaren en verwijderen</h2>
+      <p>Lokale inhoud blijft op het apparaat totdat u deze in de app verwijdert, appgegevens wist of de app verwijdert. Wij bewaren geen serverkopie van uw bibliotheek.</p>
+      <h2>8. Wijzigingen en contact</h2>
+      <p>Bij wijzigingen in gegevenspraktijken of wetgeving werken wij deze pagina en datum bij. Contact: <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <footer>Bij tegenstrijdigheid tussen een vertaling en de Engelse versie geldt, voor zover wettelijk toegestaan, de Engelse versie.</footer>
+    </section>
+    <section class="lang" data-lang="pl" lang="pl">
+      <h1>Polityka prywatności · MusePearl</h1>
+      <p class="meta">Ostatnia aktualizacja: 2026-10-05 ｜ Obowiązuje: od wydania odpowiedniej wersji</p>
+      <p class="notice"><strong>W skrócie:</strong> MusePearl to biblioteka inspiracji z lokalnym przechowywaniem danych. W aktualnej wersji utworzone treści i wybrane multimedia są domyślnie zapisywane na urządzeniu. Nie prowadzimy systemu kont ani serwera treści MusePearl.</p>
+      <h2>1. Zakres</h2>
+      <p>Niniejsza polityka opisuje przetwarzanie informacji w aktualnej wersji iOS / Android, w tym danych lokalnych, pomocy, udostępniania systemowego i zakupów w aplikacji.</p>
+      <h2>2. Informacje przechowywane na urządzeniu</h2>
+      <p>Teksty, tagi, statusy, ulubione, daty, uzupełnienia, obrazy, miniatury, załączniki, ustawienia lokalne i stan uprawnień zakupionych funkcji mogą być przechowywane na urządzeniu. Synchronizacja iCloud / CloudKit nie jest oferowana.</p>
+      <h2>3. Zdjęcia, aparat i powiadomienia</h2>
+      <p>Dostęp do zdjęć jest używany, gdy wybierasz lub zapisujesz multimedia. Aparat jest używany, gdy wybierasz wykonanie zdjęcia. Dozwolone powiadomienia służą tylko włączonej funkcji. Uprawnienia można cofnąć w ustawieniach systemu.</p>
+      <h2>4. Udostępnianie i usługi zewnętrzne</h2>
+      <p>Podczas udostępniania, kopiowania, drukowania, eksportu lub wysyłania e-mail wybrane informacje są przekazywane systemowi lub wskazanej aplikacji. Dalsze przetwarzanie podlega zasadom tej usługi. Wiadomości pomocy trafiają do <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <h2>5. Członkostwo i zakupy</h2>
+      <p>Zakupy i subskrypcje obsługuje odpowiedni sklep, np. Apple App Store lub Google Play. MusePearl nie otrzymuje pełnych danych karty, ale może otrzymać status transakcji i uprawnień potrzebny do funkcji zakupionych.</p>
+      <h2>6. Zbieranie, reklamy i śledzenie</h2>
+      <p>Aktualna wersja nie zawiera prowadzonego przez nas systemu kont, sieci reklamowej ani analityki do tworzenia profili reklamowych. Nie sprzedajemy treści inspiracji.</p>
+      <h2>7. Przechowywanie i usuwanie</h2>
+      <p>Treści lokalne pozostają na urządzeniu do czasu usunięcia ich w aplikacji, wyczyszczenia danych lub odinstalowania aplikacji. Nie przechowujemy kopii biblioteki na serwerze.</p>
+      <h2>8. Zmiany i kontakt</h2>
+      <p>Gdy zmienią się praktyki lub wymagania prawne, zaktualizujemy tę stronę i datę. Kontakt: <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <footer>W razie rozbieżności między tłumaczeniem a wersją angielską, w zakresie dozwolonym przez prawo obowiązuje wersja angielska.</footer>
+    </section>
+    <section class="lang" data-lang="ru" lang="ru">
+      <h1>Политика конфиденциальности · MusePearl</h1>
+      <p class="meta">Обновлено: 2026-10-05 ｜ Вступает в силу: при выпуске соответствующей версии</p>
+      <p class="notice"><strong>Кратко:</strong> MusePearl — библиотека идей с приоритетом локального хранения. В текущей версии созданные вами материалы и выбранные медиа по умолчанию сохраняются на устройстве. Мы не управляем системой аккаунтов или сервером контента MusePearl.</p>
+      <h2>1. Область действия</h2>
+      <p>Эта политика описывает обработку информации в текущей версии для iOS / Android, включая локальные данные, поддержку, системный обмен и покупки в приложении.</p>
+      <h2>2. Информация на устройстве</h2>
+      <p>Тексты, теги, статусы, избранное, даты, дополнения, изображения, миниатюры, вложения, локальные настройки и статус прав покупки могут храниться на устройстве. Синхронизация iCloud / CloudKit не предоставляется.</p>
+      <h2>3. Фото, камера и уведомления</h2>
+      <p>Доступ к фото используется при выборе или сохранении медиа. Камера используется при выборе фотосъёмки. Разрешённые уведомления используются только для включённой вами функции. Разрешения можно отозвать в настройках системы.</p>
+      <h2>4. Обмен и внешние сервисы</h2>
+      <p>При явном использовании обмена, копирования, печати, экспорта или почты выбранная информация передаётся системе или выбранному приложению. Дальнейшая обработка регулируется политикой этого сервиса. Письма поддержки отправляются на <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <h2>5. Членство и покупки</h2>
+      <p>Покупки и подписки обрабатывает соответствующий магазин, например Apple App Store или Google Play. MusePearl не получает полные данные карты, но может получать статус транзакции и прав, необходимый для включения покупных функций.</p>
+      <h2>6. Сбор, реклама и отслеживание</h2>
+      <p>Текущая версия не содержит управляемого нами сервиса аккаунтов, рекламной сети или аналитики для рекламных профилей. Мы не продаём ваши материалы вдохновения.</p>
+      <h2>7. Хранение и удаление</h2>
+      <p>Локальные материалы остаются на устройстве, пока вы не удалите их в приложении, не очистите данные или не удалите приложение. Копия библиотеки на сервере не хранится.</p>
+      <h2>8. Изменения и связь</h2>
+      <p>При изменении практик обработки данных или требований закона мы обновим эту страницу и дату. Контакт: <a href="mailto:g365805967@gmail.com">g365805967@gmail.com</a>.</p>
+      <footer>Если перевод расходится с английской версией, в пределах, разрешённых применимым законодательством, действует английская версия.</footer>
     </section>
   </div>
 </main>
 <script>
-  const sections = [...document.querySelectorAll('.lang')];
-  const buttons = [...document.querySelectorAll('[data-lang-button]')];
-  function setLanguage(language) {
-    const selected = sections.some((section) => section.dataset.lang === language) ? language : 'en';
-    sections.forEach((section) => section.classList.toggle('active', section.dataset.lang === selected));
-    buttons.forEach((button) => button.classList.toggle('active', button.dataset.langButton === selected));
+  const sections = [...document.querySelectorAll(".lang")];
+  const buttons = [...document.querySelectorAll("[data-lang]")];
+  function normalize(code) {
+    const value = (code || "").toLowerCase();
+    if (value.startsWith("zh-tw") || value.startsWith("zh-hk") || value.startsWith("zh-hant")) return "zh-Hant";
+    if (value.startsWith("zh")) return "zh-Hans";
+    const exact = buttons.find((button) => button.dataset.lang.toLowerCase() === value);
+    if (exact) return exact.dataset.lang;
+    const base = value.split("-")[0];
+    const baseMatch = buttons.find((button) => button.dataset.lang.toLowerCase() === base);
+    return baseMatch ? baseMatch.dataset.lang : "en";
+  }
+  function show(code) {
+    const selected = buttons.some((button) => button.dataset.lang === code) ? code : "en";
+    sections.forEach((section) => section.classList.toggle("active", section.dataset.lang === selected));
+    buttons.forEach((button) => button.classList.toggle("active", button.dataset.lang === selected));
     document.documentElement.lang = selected;
   }
-  buttons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.langButton)));
-  setLanguage((navigator.language || '').toLowerCase().startsWith('zh') ? 'zh-Hans' : 'en');
+  buttons.forEach((button) => button.addEventListener("click", () => show(button.dataset.lang)));
+  show(normalize(navigator.language || (navigator.languages && navigator.languages[0])));
 </script>
 </body>
 </html>
